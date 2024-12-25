@@ -45,10 +45,10 @@ class CountryResource extends Resource
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
-                SelectFilter::make('Batch')
-                    ->relationship('batch', 'name'),
-                SelectFilter::make('Country')
-                    ->relationship('country', 'name')
+                // SelectFilter::make('Batch')
+                //     ->relationship('batch', 'name'),
+                // SelectFilter::make('Country')
+                //     ->relationship('country', 'name')
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

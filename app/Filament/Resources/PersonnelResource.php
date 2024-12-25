@@ -63,16 +63,16 @@ class PersonnelResource extends Resource
             ->badge()
             ->color(fn (string $state): string => match ($state) {
                 'active' => 'warning',
-                'graduated' => 'success',
-            }),
+                'graduated' => 'success'
+            })
             // Tables\Columns\TextColumn::make('consumption'),
             // Tables\Columns\TextColumn::make('observation'),
             // ...
         ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
-                SelectFilter::make('personnel')
-                ->relationship('personnel.country', 'name')
+                // SelectFilter::make('personnel')
+                // ->relationship('personnel.country', 'name')
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
